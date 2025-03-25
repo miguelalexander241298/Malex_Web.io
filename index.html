@@ -10,9 +10,12 @@
 </head>
 
 <body>
+
+    <!-- Navbar  -->
+
     <nav class="navbar" id="navbar">
         <div class="logo">
-            <img src="resources/icon_app.png" alt="logo" width="500px">
+            <img src="resources/icon_app.webp" alt="logo" width="500px">
             <h2>ale<span class="anim_nom_x">x</span></h2>
         </div>
         <ul>
@@ -21,14 +24,50 @@
             <li><a href="#section_3" class="nav">Contacto</a></li>
         </ul>
     </nav>
-    <img src="resources/love.png" alt="" id="love_img">
     <main>
+
+        <!-- Seccion loading -->
+
+        <section class="loading_section">
+            <section class="loading_container">
+                <div class="circle__container">
+                    <span class="loading_span1 loading_span"></span>
+                    <span class="loading_span2 loading_span"></span>
+                    <span class="loading_span3 loading_span"></span>
+                    <span class="loading_span4 loading_span"></span>
+                </div>
+            </section>
+        </section>
+
+        <!-- Seccion para los eventos  -->
+
+        <img src="" alt="" id="day_img">
+        <section class="event">
+            <div class="caja">
+                <img src="resources/event.webp" alt="" id="icono_evento">
+                <p id="num_event"></p>
+            </div>
+            <div class="lista_eventos">
+                <div class="event_section">
+                    <div>
+                        <!-- <img src="resources/my_photo_1.webp" alt=""> -->
+                        <h3>Aún no</h3>
+                        <p>Lo siento ... todavía no existen eventos, pero lo habrá y muy pronto ... solo espero a que
+                            la página llegue a 50 vistas. Corre y comparte ...</p>
+                    </div>
+                    <!-- <a href="https://wa.me/qr/35IGXS5EXZARD1" class="button button_event">IR</a> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentacion  -->
+
         <section class="section_1">
             <div class="perfil_info">
                 <h2>Miguel Alexander</h2>
                 <h3 class="secundary_color">Programador</h3>
-                <p>Sea bienvenido a mi sitio web. Espero que sea de su agrado. En el aprenderas un poquito sobre mi y el
-                    consagrado desempeño que realizo en el fascinante mundo de la programacion de softwares y sitios
+                <p>Sea bienvenido a mi sitio web. Espero que sea de su agrado. En el aprenderás un poquito sobre mí y el
+                    consagrado desempeño que realizo en el fascinante mundo de la programación de softwares y sitios
                     web.
                 </p>
                 <div>
@@ -37,82 +76,112 @@
                 </div>
             </div>
             <div class="perfil_logo">
-                <img src="resources/my_photo_1.jpg" alt="admin_photo" id="my_photo">
+                <img src="resources/my_photo_1.webp" alt="admin_photo" id="my_photo">
             </div>
         </section>
+
+        <!-- Detalles de perfil  -->
+
         <section class="section_2">
             <div class="sobre_mi">
-                <img src="resources/icon_app.png" alt="" id="section_perfil">
+                <img src="resources/icon_app.webp" alt="" id="section_perfil">
                 <h2 class="perfil_top border_botton_body">Un poco sobre mi</h2>
                 <p>
-                    Si haz llegado aqui toca presentarme: Mi nombre ya lo debes saber en el <a href="#navbar">Home</a>
-                    pero bueno a lo que iba ... soy un apasionado programador que se dedica a la creacion de programas
-                    de escritorio del tipo que sea, asi como la creacion de paginas web completas y profesionales.
-                    Actualmente trabajo con HTML5, Css3 y lenguajes de programacion como Python y JavaScript incluyendo
+                    Si has llegado aquí toca presentarme: Mi nombre ya lo debes saber en el <a href="#navbar">Home</a>
+                    pero bueno a lo que iba ... soy un apasionado programador que se dedica a la creación de programas
+                    de escritorio del tipo que sea, así como la creación de páginas web completas y profesionales.
+                    Actualmente trabajo con HTML5, Css3 y lenguajes de programación como Python y JavaScript incluyendo
                     paquetes y frameworks como Flet, Django, Kivy-KivyMD, TtkBootstrap, NodeJs, React, Sass entre muchos
-                    otros que haria esto medio aburrido. Me
-                    hace sentir orgulloso que todo lo que he aprendido en cuanto a este tema fue gracias al esfuerzo
-                    propio y mi interes pq es cierto que en un principio hubiece querido que alguien me encaminara un
-                    poco en cuanto al orden logico de aprendizaje pero al no tener esa persona me hizo llegar a entender
-                    que somos capaces de
-                    hacer lo que nos propongamos y punto.
+                    otros que haría esto medio aburrido. Me hace sentir orgulloso que todo lo que he aprendido en cuanto
+                    a este tema fue gracias al esfuerzo propio y mi interés porque es cierto que en un principio hubiese
+                    querido que alguien me encaminara un poco en cuanto al orden lógico de aprendizaje pero al no tener
+                    esa persona me hizo llegar a entender que somos capaces de hacer lo que nos propongamos y punto.
                 </p>
             </div>
         </section>
+
+        <!-- Servicios que pueden pedir  -->
 
         <section class="servicios" id="servicios">
             <div class="card">
                 <h2 class="perfil_top_1 border_botton_body">Puedes llamarme si necesitas</h2>
                 <div class="card_1">
-                    <img src="resources/proyect_1.png" alt="">
+                    <img src="resources/proyect_1.webp" alt="">
                     <h3 class="border_botton_body">Programas de PC</h3>
-                    <p class="secundary_color">Automatize todo lo que necesite por muy complejo que sea desde un prgrama
-                        100% funcional y
-                        certificado por usted mismo con tu propio toque y tu propia firma. Es el momento de
+                    <p class="secundary_color">Automatiza todo lo que necesite por muy complejo que sea desde un
+                        programa
+                        100% funcional y certificado por usted mismo con tu propio toque y tu propia firma. Es el
+                        momento de
                         ahorrarte todo el trabajo del mundo y hazte
-                        capaz de tener todo bajo contro y como lo desee.</p>
+                        capaz de tener todo bajo control y como lo desee.</p>
                     <a href="#section_3" class="button button_ini">Lo quiero</a>
                 </div>
                 <div class="card_1">
-                    <img src="resources/proyect_2.png" alt="">
-                    <h3 class="border_botton_body">Paginas web</h3>
-                    <p class="secundary_color">Hagase ver desde cualquier parte del mundo y muestre cuan serio es su
-                        negocio o perfil
-                        personal. Si tiene su propio negocio haga que todo lo puedan ver sus clientes desde la
-                        comodidad de su casa o en calquier parte que se encuentre.</p>
+                    <img src="resources/proyect_2.webp" alt="">
+                    <h3 class="border_botton_body">Páginas web</h3>
+                    <p class="secundary_color">Hágase ver desde cualquier parte del mundo y muestre cuan serio es su
+                        negocio o perfil personal. Tiene en su poder la facilidad de hacer que todos lo puedan ver: ya
+                        sean sus clientes o sus seguidores desde la comodidad de su casa o en cualquier parte que se
+                        encuentren.</p>
                     <a href="#section_3" class="button button_ini">Lo quiero</a>
                 </div>
             </div>
         </section>
+
+        <!-- Seccion de Contacto  -->
+
         <section class="section_3" id="section_3">
             <h2 class="secundary_color">Contacto</h2>
             <p>Puede seguirme en las redes sociales o contactarme directamente por mi WhatsApp para cualquier pregunta
-                con cualquier contenido de interes.</p>
+                con cualquier contenido de interés.</p>
             <div class="container_social">
                 <div class="social">
-                    <img src="resources/social1.png" alt="" class="social_ico">
+                    <img src="resources/social1.webp" alt="" class="social_ico">
                     <h3>Facebook</h3>
                     <a class="button button1" href="https://www.facebook.com/share/15ppeahJV8/">Seguir</a>
                 </div>
                 <div class="social social2">
-                    <img src="resources/social2.png" alt="" class="social_ico">
+                    <img src="resources/social2.webp" alt="" class="social_ico">
                     <h3>Instagram</h3>
-                    <a class="button button2" href="https://www.instagram.com/miguelalexander241298?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D">Seguir</a>
+                    <a class="button button2"
+                        href="https://www.instagram.com/miguelalexander241298?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D">Seguir</a>
                 </div>
                 <div class="social social3">
-                    <img src="resources/social3.png" alt="" class="social_ico">
+                    <img src="resources/social3.webp" alt="" class="social_ico">
                     <h3>WhatsApp</h3>
                     <a class="button button3" href="https://wa.me/qr/35IGXS5EXZARD1">Chatear</a>
                 </div>
             </div>
         </section>
+
+        <!-- Seccion nieve de dias atipicos -->
+
+        <section class="nieve">
+            <p><span class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span><span class="copo">.</span><span
+                    class="copo">.</span><span class="copo">.</span></p>
+        </section>
+
+        <!-- Pie de pagina  -->
+
         <footer>
             <div class="logo_pie">
-                <img src="resources/icon_app.png" alt="">
+                <img src="resources/icon_app.webp" alt="">
             </div>
             <div class="recomendacion">
                 <p class="secundary_color">Creado y mantenido por <a href="">Miguel Alexander</a> no dude en contactarme
                     +53 52 899 878</p>
+            </div>
+            <div class="footer_day">
+                <p class="footer_day_p"></p>
             </div>
         </footer>
     </main>

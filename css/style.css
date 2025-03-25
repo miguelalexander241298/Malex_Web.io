@@ -1,9 +1,11 @@
+/* Variables globales */
+
 :root {
     --fondo_color: #121212;
     --texto_princ: #E0E0E0;
     --texto_secund: #B0BEC5;
     --acento_color: #FF4081;
-    --enlace_color: #03A9F4;
+    --enlace_color: #5f8ec9;
 }
 
 * {
@@ -14,10 +16,14 @@
     text-decoration: none;
 }
 
+/* Detalles del cuerpo*/
+
 body {
     background-color: var(--fondo_color);
     color: var(--texto_princ);
 }
+
+/* Navbar*/
 
 .navbar {
     display: flex;
@@ -60,6 +66,8 @@ li {
 li a {
     color: var(--texto_princ);
     padding-bottom: 5px;
+    transition: all;
+    transition-duration: 0.5s;
 }
 
 li a:hover {
@@ -68,7 +76,63 @@ li a:hover {
     border-bottom-color: var(--enlace_color);
 }
 
-#love_img {
+/* Loading Section */
+
+.loading_section {
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    height: calc(100% + 50px);
+    z-index: 4;
+    background: rgba(18, 18, 18, 0.95);
+    transition: all;
+    transition-duration: 1s;
+}
+
+.loading_container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle__container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: rgba(50, 50, 50, 0.5);
+    border-radius: 50%;
+}
+
+.loading_span {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    margin: 20%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 50%;
+    background: #eee;
+    animation-name: Anim_Loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.loading_span2 {
+    animation-delay: 0.1s;
+}
+
+.loading_span3 {
+    animation-delay: 0.2s;
+}
+
+.loading_span4 {
+    animation-delay: 0.3s;
+}
+
+/* Seccion para dias atipicos  */
+
+#day_img {
     position: fixed;
     display: none;
     width: 10%;
@@ -76,12 +140,104 @@ li a:hover {
     max-width: 130px;
     right: 5%;
     top: 10%;
-    transform: rotate(225deg);
     z-index: 3;
     animation-iteration-count: infinite;
 }
 
+/* Seccion para eventos  */
+
+.event {
+    top: 50px;
+    position: fixed;
+    display: flex;
+    max-width: 600px;
+    margin-left: 2%;
+    margin-right: -8%;
+    z-index: 3;
+}
+
+.caja {
+    display: flex;
+    position: relative;
+}
+
+#icono_evento {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation-name: Anim_Evento;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.caja p {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: var(--acento_color);
+    color: #121212;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.lista_eventos {
+    position: relative;
+    left: -60px;
+    top: 85px;
+    background: rgba(1, 15, 26, 0.95);
+    padding: 3%;
+    border-radius: 0px 20px 20px 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.event_section {
+    display: flex;
+    box-shadow: 2px 2px 10px #000000;
+    padding: 3%;
+    margin-bottom: 10px;
+}
+
+.event_section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event_section img {
+    width: 100%;
+    max-width: 270px;
+    border-radius: 10px;
+}
+
+.event_section h3 {
+    width: 100%;
+    color: var(--texto_secund);
+    padding-bottom: 5px;
+    padding-left: calc(50% - 20px);
+    border-bottom: 2px solid var(--enlace_color);
+    border-bottom-left-radius: 10px;
+}
+
+.event_section p {
+    line-height: 25px;
+}
+
+.event_section a {
+    display: none;
+    justify-content: center;
+    margin: 0px 2px;
+    width: 10px;
+    /*display: flex;*/
+    align-items: center;
+}
+
+/* Clase para botones */
+
 .button {
+    cursor: pointer;
     margin: 5px;
     padding: 15px 20px;
     background-color: #194975;
@@ -98,6 +254,8 @@ li a:hover {
     background-color: #2665a0;
 }
 
+/* Seccion de presentacion */
+
 .section_1 {
     display: flex;
     flex-wrap: wrap;
@@ -105,7 +263,7 @@ li a:hover {
     margin-top: 80px;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(90deg,var(--fondo_color),#0a302b, var(--fondo_color));
+    background:linear-gradient(90deg,var(--fondo_color),#0a2730, var(--fondo_color));
     border-radius: 50vh 50vw;
 }
 
@@ -142,10 +300,11 @@ li a:hover {
     border-radius: 50%;
     min-width: 30wv;
     max-width: 400px;
-    animation-name: Photo_Anim;
     animation-duration: 2s;
     box-shadow: 2px 2px 10px #2665a0;
 }
+
+/* Seccion mas detalles */
 
 .section_2 {
     display: flex;
@@ -204,6 +363,8 @@ p a {
     margin-right: 0%;
     width: 300px;
 }
+
+/* Seccion de servicios */
 
 .servicios {
     display: flex;
@@ -269,6 +430,8 @@ p a {
     border-radius: 10px;
 }
 
+/* Seccion de contacto */
+
 .section_3 {
     margin: 10%;
     margin-top: 50px;
@@ -300,7 +463,7 @@ p a {
 .social {
     display: flex;
     position: relative;
-    border: 0.5px solid #5b68c0;
+    border: 0.5px solid #3e7abf;
     width: 250px;
     margin: 5px;
     padding: 5px;
@@ -308,7 +471,7 @@ p a {
     margin-left: 40px;
     margin-bottom: 30px;
     border-radius: 10px;
-    box-shadow: 1px 2px 5px #5b68c0;
+    box-shadow: 1px 2px 5px #3e7abf;
 }
 
 .button1 {
@@ -316,13 +479,13 @@ p a {
 }
 
 .social2 {
-    border-color: #ff78c7;
-    box-shadow: 1px 2px 5px #ff78c7;
+    border-color: #b3498f;
+    box-shadow: 1px 2px 5px #b3498f;
 }
 
 .button2 {
     cursor: pointer;
-    background-color: #ff78c7;
+    background-color: #b3498f;
     color: var(--fondo_color);
 }
 
@@ -331,13 +494,13 @@ p a {
 }
 
 .social3 {
-    border-color: #80d25b;
-    box-shadow: 1px 2px 5px #80d25b;
+    border-color: #459d72;
+    box-shadow: 1px 2px 5px #459d72;
 }
 
 .button3 {
     cursor: pointer;
-    background-color: #80d25b;
+    background-color: #459d72;
     color: var(--fondo_color);
 }
 
@@ -347,16 +510,15 @@ p a {
 
 .social img {
     position: absolute;
-    left: -30px;
-    background: var(--fondo_color);
-    background: radial-gradient(#0a302a,var(--fondo_color));
+    left: -40px;
+    top: -9px;
     border-radius: 50%;
     transition: all 1s;
 }
 
 .social:hover img {
     transform: rotate(360deg);
-    left: 90px;
+    left: 70px;
 }
 
 .social h3 {
@@ -368,6 +530,19 @@ p a {
     bottom: -25px;
     right: 0px;
 }
+
+/* nieve */
+
+.copo {
+    display: none;
+    top: -50px;
+    font-size: 50px;
+    animation-name: Anim_Copo_1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+/* Pie de pagina */
 
 footer {
     padding: 10px;
@@ -405,6 +580,27 @@ footer {
     margin: 10px;
 }
 
+.footer_day {
+    display: none;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    margin-left: -10px;
+    height: 40px;
+    bottom: 0px;
+}
+
+.footer_day_p {
+    position: relative;
+    left: 100%;
+    animation-name: Anim_Footer;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* Animaciones */
+/* Animacion de logo */
+
 @keyframes Photo_Anim {
     0%{
         transform: scale(0);
@@ -413,6 +609,22 @@ footer {
         transform: translate(-45vw,-50vh) scale(0);
     }
 }
+
+/* Animacion del icono de evento */
+
+@keyframes Anim_Evento {
+    25% {
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-45deg);
+    }
+}
+
+/* Animacion de la 'X' del logo */
 
 @keyframes Animate_X {
     20% {
@@ -439,7 +651,78 @@ footer {
     }
 }
 
+/* Animacion del loading */
+
+@keyframes Anim_Loading {
+    10% {
+        bottom: 0%;
+        left: 0%;
+        background: #eee;
+    }
+
+    20% {
+        bottom: 50%;
+        left: 0%;
+        background: rgb(253, 125, 125);
+    }
+
+    30% {
+        bottom: 25%;
+        left: 25%;
+        background: rgb(121, 255, 121);
+    }
+
+    40% {
+        bottom: 50%;
+        left: 50%;
+        background: rgb(255, 255, 118);
+    }
+
+    50% {
+        bottom: 0%;
+        left: 50%;
+        background: #eee;
+    }
+
+    60% {
+        bottom: 0%;
+        left: 50%;
+        background: #eee;
+    }
+
+    70% {
+        bottom: 50%;
+        left: 50%;
+        background: rgb(255, 255, 118);
+    }
+
+    80% {
+        bottom: 25%;
+        left: 25%;
+        background: rgb(121, 255, 121);
+    }
+
+    90% {
+        bottom: 50%;
+        left: 0%;
+        background: rgb(253, 125, 125);
+    }
+}
+
+/* Animacion de copos de nieve */
+
+@keyframes Anim_Copo_1 {
+    100%{
+        top: 100%;
+    }
+}
+
+/* Animacion para dia 14 de febrero */
+
 @keyframes Anim_Love {
+    0% {
+        transform: rotate(225deg);
+    }
     2.5% {
         transform: scale(0.8) rotate(225deg);
     }
@@ -510,7 +793,103 @@ footer {
         right: 5%;
         top: 10%;
     }
+    100% {
+        transform: rotate(225deg);
+    }
 }
+
+/* Animacion para dia 1 de mayo */
+
+@keyframes Anim_Trabajador {
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: scale(1.2) rotate(-45deg);
+    }
+    7.5% {
+        transform: scale(0.8) rotate(0deg);
+    }
+    10% {
+        transform: scale(1.2) rotate(0deg);
+    }
+    12.5% {
+        transform: scale(0.8) rotate(0deg);
+        right: 5%;
+    }
+    15% {
+        transform: scale(1.2) rotate(0deg);
+        top: 10%;
+        right: 6%;
+    }
+    30% {
+        transform: scale(0.1) rotate(-135deg);
+        top: 110%;
+        right: 15%;
+    }
+    31% {
+        transform: scale(1);
+        top: 100%;
+        right: -25%;
+    }
+    32% {
+        top: -10%;
+        right: -15%;
+    }
+    40%{
+        transform: rotate(0deg);
+        right: 5%;
+        top: 10%;
+    }
+    45%{
+        transform: rotate(45deg);
+        right: 5%;
+        top: 10%;
+    }
+    55%{
+        transform: rotate(0deg) scale(0.6);
+        right: 5%;
+        top: 10%;
+    }
+    65%{
+        transform: rotate(-45deg);
+        right: 5%;
+        top: 10%;
+    }
+    75%{
+        transform: rotate(0deg) scale(1.3);
+        right: 5%;
+        top: 10%;
+    }
+    85%{
+        transform: rotate(45deg);
+        right: 5%;
+        top: 10%;
+    }
+    90%{
+        transform: rotate(0deg);
+        right: 5%;
+        top: 10%;
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animacion del footer dias atipicos */
+
+@keyframes Anim_Footer {
+    50%{
+        left: 0%;
+    }
+
+    100%{
+        left: -100%;
+    }
+}
+
+/* Mediaqueris para responsive al
+paso para moviles y tabletas */
 
 @media (max-width: 490px) {
     .card {
